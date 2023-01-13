@@ -21,6 +21,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/auth", include("authentication.urls")),
+    path("api/income/", include("income.urls")),
     path(
         "docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
