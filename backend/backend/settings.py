@@ -143,6 +143,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 
 SWAGGER_SETTINGS = {
