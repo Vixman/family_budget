@@ -17,11 +17,11 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/auth", include("authentication.urls")),
     path("api/income/", include("income.urls")),
+    path("api/expenses/", include("expenses.urls")),
     path(
         "docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
