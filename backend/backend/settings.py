@@ -120,6 +120,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Rest framework settings
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 20,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -143,7 +148,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:8080", "http://127.0.0.1:8000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:8080", "http://localhost:8000"]
 
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 
